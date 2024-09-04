@@ -1,0 +1,22 @@
+.button {
+    --bg-color: var(--primary);
+    @include button();
+    & {
+        border-radius: 4px;
+    }
+    &:disabled {
+        --bg-color: hsla(0, 0%, 100%, 0.15);
+        --color: hsla(0, 0%, 100%, 0.3);
+        pointer-events: none;
+    }
+}
+@include hover-able() {
+    .button {
+        &:hover {
+            --bg-color: var(--primary-hover);
+        }
+        &:focus {
+            --bg-color: var(--primary-focus);
+        }
+    }
+}

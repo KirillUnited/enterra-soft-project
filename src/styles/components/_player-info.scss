@@ -1,0 +1,98 @@
+.player-info {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+
+    &-title {
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        overflow: hidden;
+    }
+    &-name {
+        @include truncate();
+        font-size: 16px;
+        font-weight: 400;
+        line-height: calc(19.5px / 16px * 100%);
+        text-align: right;
+
+        margin: 0;
+    }
+    &-rating {
+        display: flex;
+        align-items: center;
+    }
+    &-avatar {
+        flex-shrink: 0;
+        & > img {
+            display: block;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            border: 1px solid hsla(248, 16%, 29%, 1);
+        }
+    }
+    &-balance {
+        --icon-size: 36px;
+        --bg-color: var(--primary);
+        --transition: all var(--transition-duration) ease-in-out;
+        max-width: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 26px;
+        gap: 9px;
+        background-color: var(--bg-color);
+        border-radius: 24px;
+        overflow: hidden;
+        padding-right: 8px;
+        padding-left: 32px;
+        transition: var(--transition);
+        &.shown {
+            --bg-color: hsla(248, 23%, 26%, 1);
+            padding-left: 48px;
+        }
+        &-icon {
+            --bg-color: var(--primary);
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: var(--primary-foreground);
+            flex: 1 0 var(--icon-size);
+            width: var(--icon-size);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-color);
+            border-radius: 16px;
+            transition: var(--transition);
+        }
+        &-value {
+            @include truncate();
+            position: relative;
+            font-variant-numeric: tabular-nums;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1;
+            text-align: right;
+            .shown & {
+                font-weight: 400;
+            }
+        }
+    }
+}
+@include hover-able() {
+    .player-info-balance:not(.shown):hover,
+    .player-info-balance:hover .player-info-balance-icon {
+        --bg-color: var(--primary-hover);
+    }
+    .player-info-balance:not(.shown):focus,
+    .player-info-balance:focus .player-info-balance-icon {
+        --bg-color: var(--primary-focus);
+    }
+}

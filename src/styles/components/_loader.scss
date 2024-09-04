@@ -1,0 +1,26 @@
+.loader {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    &-progress {
+        position: relative;
+        height: 4px;
+        border-radius: 4px;
+        background-color: hsla(248, 23%, 26%, 1);
+        overflow: hidden;
+        &-value {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 4px;
+            background-color: var(--primary);
+            transition: width var(--transition-duration) ease-in-out;
+        }
+    }
+    &-text {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: calc(12.19px / 10px * 100%);
+    }
+}
