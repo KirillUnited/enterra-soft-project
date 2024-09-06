@@ -9,7 +9,8 @@ import tournaments from './data/tournaments.js';
 import useLoading from './hooks/useLoading.js';
 
 function App() {
-  const {percent, isLoaded} = useLoading(0);
+  const { percent, isLoaded } = useLoading(0);
+  const [activeEl, setActiveEl] = React.useState(false);
 
   return (
     <div className='app'>
@@ -20,7 +21,9 @@ function App() {
       <PlayerInfo name="LongUserName" rating={5} avatar={Avatar} />
       {isLoaded && <Loader loading={percent} />}
       <div className="grid">
-        {tournaments.list.map((item, index) => <TournamentItem key={item.id} {...item} />)}
+        {tournaments.list.map((item, index) => {
+          return <TournamentItem key={item.id} {...item} activeEl={activeEl} setActiveEl={setActiveEl} />
+        })}
       </div>
     </div>
   )
