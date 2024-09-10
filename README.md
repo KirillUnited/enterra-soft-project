@@ -1,8 +1,8 @@
 ## ⚙️ Tech Stack
 
-- ⚡ Reacr.js - Fast by default, with config optimized for performance (with App Directory)
+- ⚡ React.js - Fast by default, with config optimized for performance (with App Directory)
 - 🎨 SASS (SCSS) - The most developed and stable professional-grade CSS extension.
-- 
+  
 ## Getting Started
 
 ```bash
