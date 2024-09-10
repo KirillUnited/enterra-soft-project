@@ -8,9 +8,6 @@
     &.selected {
         --card-background: hsla(247, 30%, 35%, 1);
     }
-    &.active {
-        --card-background: #ff0000;
-    }
 
     &-content {
         padding: 8px;

@@ -3,7 +3,6 @@ const data = {
         {
             "id": 1,
             "name": "OFC Pineapple",
-            "selected": false,
             "state": "Registering",
             "pin": true,
             "tag": "NL 2-7 Triple Draw",
@@ -19,7 +18,6 @@ const data = {
         {
             "id": 2,
             "name": "Hourly Freeroll",
-            "selected": false,
             "state": "Canceled",
             "pin": true,
             "tag": "HNL Holdem",
@@ -33,7 +31,6 @@ const data = {
         {
             "id": 3,
             "name": "OFC Pineapple",
-            "selected": true,
             "state": "Registering",
             "pin": false,
             "tag": "NL 2-7 Triple Draw",
@@ -48,7 +45,6 @@ const data = {
         {
             "id": 4,
             "name": "Hourly Freeroll",
-            "selected": false,
             "state": "Canceled",
             "pin": true,
             "tag": "HNL Holdem",
@@ -63,7 +59,6 @@ const data = {
         {
             "id": 5,
             "name": "OFC Pineapple",
-            "selected": false,
             "state": "Registering",
             "pin": false,
             "tag": "NL 2-7 Triple Draw",
