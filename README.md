@@ -3,7 +3,7 @@
 - ⚡ React.js - The library for web and native user interfaces.
 - 🎨 SASS (SCSS) - The most developed and stable professional-grade CSS extension.
   
-## Getting Started
+## 🚀 Getting Started
 
 ```bash
 npm run dev
