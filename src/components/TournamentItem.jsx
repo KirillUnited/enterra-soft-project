@@ -4,7 +4,7 @@ import TournamentItemInfo from './TournamentItemInfo'
 import TournamentItemMetadata from './TournamentItemMetadata'
 
 export default function TournamentItem({
-    selected = false,
+    id,
     pin = false,
     state = '',
     name = '',
@@ -14,11 +14,17 @@ export default function TournamentItem({
     tourney = '',
     types = [],
     customClass = '',
+    setSelectedEl,
+    selectedEl
 }) {
-    const classes = `tournamentItem${state === 'Canceled' ? ' canceled' : ''}${selected ? ' selected' : ''}${customClass ? ' ' + customClass : ''}`
+    const handleClick = (e) => {
+        e.preventDefault;
+        setSelectedEl(id)
+    }
+    const classes = `tournamentItem${state === 'Canceled' ? ' canceled' : ''}${selectedEl === id ? ' selected' : ''}${customClass ? ' ' + customClass : ''}`
 
     return (
-        <a href='#' className={`${classes}`}>
+        <a href='#' onClick={handleClick} className={`${classes}`}>
             <div className='tournamentItem-state'>
                 <span className='tournamentItem-state-text'>{state}</span>
             </div>

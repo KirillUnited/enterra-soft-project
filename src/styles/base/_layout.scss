@@ -1,0 +1,29 @@
+body {
+    font-family: var(--font-sans);
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    color: var(--foreground);
+    background-color: var(--background);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+    margin-inline: auto;
+    max-inline-size: 480px;
+    padding-inline: 5px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 10px 0;
+    & > * {
+        flex: 1 1 max(320px, 100%);
+    }
+}

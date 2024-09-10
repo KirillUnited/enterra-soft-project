@@ -8,6 +8,7 @@ $base: 16px;
 $base-viewport-mobile: 576px;
 
 :root {
+    --font-sans: 'Montserrat', sans-serif;
     --primary: hsla(141, 100%, 37%, 1);
     --primary-hover: hsla(140, 59%, 54%, 1);
     --primary-focus: hsla(140, 81%, 30%, 1);
