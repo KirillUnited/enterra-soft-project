@@ -1,6 +1,6 @@
 ## ⚙️ Tech Stack
 
-- ⚡ React.js - Fast by default, with config optimized for performance (with App Directory)
+- ⚡ React.js - The library for web and native user interfaces.
 - 🎨 SASS (SCSS) - The most developed and stable professional-grade CSS extension.
   
 ## Getting Started
